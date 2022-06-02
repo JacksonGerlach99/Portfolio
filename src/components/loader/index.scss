@@ -1,0 +1,13 @@
+@import '~loaders.css/src/animations/line-scale.scss';
+
+    .loader-active{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        animation: fadeOut 1s 1s;
+        animation-fill-mode: forwards;
+        
+    }
+
+
