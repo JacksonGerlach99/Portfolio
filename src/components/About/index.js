@@ -2,29 +2,33 @@ import './index.scss'
 import ParticleBackground from '../particles'
 import Art from './Art'
 import ScreenChange from '../loader'
+import { Container, Row, Col } from 'react-grid-system'
 
 
 
 const About = () => {
 
     return (
-        <div className='about-page'>
+        <Container className='about-page'>
             <ParticleBackground/>
-            <div className='text-zone'>
-            <div class="glitch" data-text="<About Me/>">
-            <div>&lt;About Me/&gt;</div>
-                </div> 
-                <div class="glow"><div>&lt;About Me/&gt;</div>
-                </div>
-            
-            <p>I'm a Computer Science Undergradute student at the university of Victoria, B.C. Canada. I'm an <span className="highLight">avid learner</span> with a <span className="highLight">strong work ethic</span>, <span className="highLight">time management</span> and interpsonal <span className="highLight">communications skills</span>. I have been working with computers since a young age, hardware and software wise. I Grew up moving around a lot making me very adaptable to different envoirments. In my free time I enjoy exercising, coding, and small social gatherings!</p>
-            </div>
+                <Row align="center" justify="center" direction="row" className='row'>
+                    <Col xl = {5}  md ={12} lg = {10}>
+                    <div className='text-zone'>
+                    <div class="glitch" data-text="<About Me/>">
+                    <div>&lt;About Me/&gt;</div>
+                        </div> 
+                    
+                    <p>I'm a Computer Science Undergraduate student at the university of Victoria, B.C. Canada. I'm an <span className="highLight">avid learner</span> with a <span className="highLight">strong work ethic</span>, <span className="highLight">time management</span> and interpersonal  <span className="highLight">communications skills</span>. I have been working with computers since a young age, hardware and software wise. I Grew up moving around a lot making me very adaptable to different environments. In my free time I enjoy exercising, coding, and small social gatherings!</p>
+                    </div>
+                    </Col>
 
-        <div className='right-side'>
-            <Art/>
-        </div>
-            <ScreenChange/>
-        </div>
+                    <Col xl = {7}  md ={10} lg = {8} align="center" className='right-side-about'>
+                        <Art/>
+                    </Col>
+                <ScreenChange/>
+                </Row>
+        </Container>
+        
     )
 }
 

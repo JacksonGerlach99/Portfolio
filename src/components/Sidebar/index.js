@@ -8,7 +8,9 @@ import {faLinkedinIn, faGithub, faTwitter } from '@fortawesome/free-brands-svg-i
 
 
 
+
 const Sidebar = () => (
+
     <div className='nav-bar'>
         <Link className='tag' to="/">
         <img className ='logo' src = {JG} alt = 'tag'/>
@@ -50,9 +52,6 @@ const Sidebar = () => (
 
         </ul>
         
-
-
-
     </div>
 )
 

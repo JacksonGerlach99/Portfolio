@@ -5,6 +5,7 @@ import { useRef } from 'react'
 import { MapContainer, TileLayer } from 'react-leaflet'
 import emailjs from '@emailjs/browser'
 import ScreenChange from '../loader'
+import { Container, Row, Col } from 'react-grid-system'
 
 
 const Contact = () =>{
@@ -26,7 +27,7 @@ const Contact = () =>{
           .then(
             () => {
               alert('Message sent!')
-              window.location.reload(false)
+             
             },
             () => {
               alert('Failed to send, please try again')
@@ -39,9 +40,10 @@ const Contact = () =>{
     
     return(
         <>
+        <Container className="contact-container" fluid>
         
-        <div className="contact-container">
-            {/* <ParticleBackground/> */}
+            <Row align="center" justify="center" direction="row" className='row'>
+            <Col xl = {5} md={11} xs={11} offset={{ md: 1 }}>
             <div className="text-zone">
                 <AnimatedLetters 
                 letterClass={letterClass}
@@ -69,27 +71,21 @@ const Contact = () =>{
                         </ul>
                     </form>
                 </div>
-
-
-
             </div>
-            <div className="info-map">
-                Jackson Gerlach,
-                <br/>
-                Victoria, Vancouver Island,
-                <br/>
-                British Columbia, Canada
-            </div>
+            </Col>
+
+            <Col xl = {6} md={12} xs={11}>
             <div className="map">
                 <MapContainer center={[48.4284, -123.3656]} zoom={13}>
                     <TileLayer url ="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
                 </MapContainer>
             </div>
+            </Col>
 
-
-        <ScreenChange/>
-
-        </div>
+        
+            <ScreenChange/>
+            </Row>
+        </Container>
         
         </>
     )

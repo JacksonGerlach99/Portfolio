@@ -1,174 +1,186 @@
 
   
 .home-page {
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-
-    .text-zone {
-      flex: 100%;
-      position: absolute;
-      // overflow: hidden;
-      left: 10%;
-      top: 50%;
-      transform: translateY(-50%);
-      
-      width: 45%;
-      max-height: 90%;
-      color: white;
-      font-size: 80px;
-      line-height: 140px;
-      margin: 0;
-      font-family: "SquareGrotesk-MediumItalic";
-      font-style: italic;
-      font-weight: 400;
-      animation: fadeIn 1s 1.5s backwards;
-    
-    
-      .contact-button{
-        display: block;
-        text-decoration: none;
-        text-align: center;
-        color: #FF9900;
-        width: 25%;
-        line-height: 40px;
-        font-size: 1.2vw;
-        font-weight: 300;
-        letter-spacing: 4px;
-        border: 3px solid #FF9900;
-        // border-radius: 8%;
-        margin-left: 7.5vw;
-        margin-top: -30px;
-
-
-        &:hover{
-          background-color: #FF9900;
-          color: white;
-        }
-        
-      }
-    
-
-    }
-
-    .right-side{
-      overflow: hidden;
-      position: relative;
-      flex: 50%;
-      width: 50vw;
-      left: 45vw;
-      top: 3vh;
-      height: 90vh;
-      max-width: 90%;
-      // animation: fadeIn 1s 1s backwards;
-      
-      .control{
-        margin-right: 200px;
-        height: 80vh;
-      }
-    
-    
-    }
-
-
-    .glitch {
-      color: #FF9900;
-      position: relative;
-      font-size: 7vw;
-      // min-width: 7vw;
-      // margin: 70px 200px;
-      animation: glitch 5s 5s infinite;
-    }
-    
-    .glitch::before {
-      content: attr(data-text);
-      position: absolute;
-      left: -2px;
-      text-shadow: -5px 0 magenta;
-      background: black;
-      overflow: hidden;
-      top: 0;
-      animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
-    }
-    
-    .glitch::after {
-      content: attr(data-text);
-      position: absolute;
-      left: 2px;
-      text-shadow: -5px 0 lightgreen;
-      background: black;
-      overflow: hidden;
-      top: 0;
-      animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
-    }
-    
-    @keyframes glitch {
-      1%{
-        transform: rotateX(10deg) skewX(90deg);
-      }
-      2%{
-        transform: rotateX(0deg) skewX(0deg);
-      }
-    }
-    
-    @keyframes noise-1 {
-      $steps: 30;
-      @for $i from 1 through $steps {
-        #{percentage($i*(1/$steps))} {
-          $top: random(100);
-          $bottom: random(101 - $top);
-          clip-path: inset(#{$top}px 0 #{$bottom}px 0);
-        }
-      }
-    }
-    
-    @keyframes noise-2 {
-      $steps: 30;
-      @for $i from 0 through $steps {
-        #{percentage($i*(1/$steps))} {
-          $top: random(100);
-          $bottom: random(101 - $top);
-          clip-path: inset(#{$top}px 0 #{$bottom}px 0);
-        }
-      }
-    }
-
-    
-    .glow {
-      @extend .glitch;
-      text-shadow: 0 0 1000px rgb(223, 191, 191);
-      color: transparent;
-      position: absolute;
-      top: 0;
-    }
-    .subtitle {
-      
-      text-decoration: overline;
-      margin-top: -60px;
-      width: 100%;
-      line-height: 13vh;
-      font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow: hidden;
+  .text-zone {
+    margin-top: 10vh;
+    display: block;
+    flex: 50%;
+    // position: absolute;
+    // overflow: hidden;
+    // border: 2px solid red;
+    color: white;
+    line-height:calc(40px + 5vw);
+    font-family: "SquareGrotesk-MediumItalic";
+    font-style: italic;
+    font-weight: 400;
+    animation: fadeIn 1s 1.5s backwards;
+    .Title{
       // border: 2px solid red;
-      font-size: 19px;
-      color: white;
-      text-transform: uppercase;
-      // letter-spacing: 0.5em;
-      // text-align: center;
-      position: relative;
-      // left: 17%;
-      animation: glitch-2 5s 5s infinite;
-    }
-    
-    @keyframes glitch-2 {
-      1%{
-        transform: rotateX(10deg) skewX(70deg);
-      }
-      2%{
-        transform: rotateX(0deg) skewX(0deg);
-      }
+      margin: auto;
+      // border: 2px solid red;
     }
     
   
+    .contact-button{
+      display: block;
+      text-decoration: none;
+      flex: 50%;
+      color: #FF9900;
+      width: calc(80px + 7vw);
+      line-height: calc(10px + 3vh);
+      font-size: calc(10px + 0.8vw);
+      font-weight: 300;
+      letter-spacing: 4px;
+      border: 3px solid #FF9900;
+      
+      // border-radius: 8%;
+     
+
+
+      &:hover{
+        background-color: #FF9900;
+        color: white;
+      }
+      
+    }
+  
+
+  }
+
+  .right-side{
+    opacity: 1;
+    flex: 50%;
+  
+  
+  }
+
+
+  .glitch {
+    color: #FF9900;
+    position: relative;
+    font-size:calc(40px + 5vw);
+    display: flex;
+    animation: glitch 5s 5s infinite;
+    left: 7%;
+  }
+  
+  .glitch::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: -5px 0 magenta;
+    background: black;
+    overflow: hidden;
+    top: 0;
+    animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+  }
+  
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 4px;
+    text-shadow: -5px 0 lightgreen;
+    background: black;
+    overflow: hidden;
+    top: 0;
+    animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+  }
+  
+  @keyframes glitch {
+    1%{
+      transform: rotateX(10deg) skewX(90deg);
+    }
+    2%{
+      transform: rotateX(0deg) skewX(0deg);
+    }
+  }
+  
+  @keyframes noise-1 {
+    $steps: 30;
+    @for $i from 1 through $steps {
+      #{percentage($i*(1/$steps))} {
+        $top: random(100);
+        $bottom: random(101 - $top);
+        clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+      }
+    }
+  }
+  
+  @keyframes noise-2 {
+    $steps: 30;
+    @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+        $top: random(100);
+        $bottom: random(101 - $top);
+        clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+      }
+    }
+  }
+
+  
+  .glow {
+    @extend .glitch;
+    text-shadow: 0 0 1000px rgb(223, 191, 191);
+    color: transparent;
+    position: absolute;
+    top: 0;
+  }
+  .subtitle {
+    flex: 50%;
+    line-height: calc(20px + 5vw);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:calc(13px + 0.3vw);
+    color: white;
+    text-transform: uppercase;
+    // letter-spacing: 0.5em;
+    text-align: center;
+    animation: glitch-2 5s 5s infinite;
+    margin: auto;
+  }
+  
+  @keyframes glitch-2 {
+    1%{
+      transform: rotateX(10deg) skewX(70deg);
+    }
+    2%{
+      transform: rotateX(0deg) skewX(0deg);
+    }
+  }
+  
+
 }
 
+@media screen and (max-width:630px){
+  .nav-bar{
+    display: none;
+  }
+  .glitch{
+    margin-left: calc(30px + 1vw);
+  }
+  .map{
+    display: none;
+  }
+}
+@media screen and (min-width:600px) and (max-width:1000px){
+  .glitch{
+    margin-left: calc(30px + 10vw);;
+    margin-top: 10%;
+  }
+}
+@media screen and (min-width:1000px) and (max-width:1200px){
+  .glitch{
+    margin-left: calc(120px + 5vw);
+  }
+
+}
+@media screen and (min-width:630px){
+  .Tbar-page{
+    display: none;
+  }
+
+
+}

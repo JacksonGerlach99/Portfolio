@@ -1,30 +1,36 @@
 .skill-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: black;
+
+  
+  .row{
+    margin-top: calc(20px + 8vw);
+  }
+
     .text-zone{
-        position: absolute;
+        word-wrap: normal;
+        flex: 50%;
         display: block;
         overflow: hidden;
-        left: 10%;
-        top: 55%;
-        transform: translateY(-50%);
-        
-        width: 40%;
-        max-height: 90%;
         color: white;
-        line-height: 80px;
+        line-height: calc(20px + 3vw);
+        height: auto;
         margin: 0;
+        margin-left: 1px;
         font-family: "SquareGrotesk-MediumItalic";
         font-style: italic;
         font-weight: 400;
         animation: fadeIn 1s 1s backwards;
-        margin-left: 10px;
 
 
 
         p{
-            display: inline-block;
-            line-height: 40px;
+            margin-left: 30px;
+            line-height: 40px; 
             font-weight: 300;
-            font-size: 20px;
+            font-size: calc(16px + .2vw);
           }
         .highLight{
             color: #FF9900;
@@ -33,10 +39,11 @@
         
     }
     .glitch {
-        display: block;
+        display: flex;
         color: #FF9900;
         position: relative;
-        font-size: 4.5vw;
+        font-size: calc(20px + 3vw);;
+        overflow: hidden;
         
         // min-width: 7vw;
         // margin: 70px 200px;
@@ -95,32 +102,24 @@
           }
         }
       }      
-      .glow {
-        @extend .glitch;
-        text-shadow: 0 0 1000px rgb(223, 191, 191);
-        color: transparent;
-        position: absolute;
-        top: 0;
-      }
-      .right-side{
-          overflow: hidden;
-      }
+
+
       .tagcloud-wrap {
         opacity: 0;
         overflow: hidden;
         display: block;
-        width: 55vw;
-        height: 700px;
+        height: 670px;
         margin: auto;
         float: right;
-        margin-top: 10vh;
+        margin-top: -2%;
         animation: fadeIn 1s 1s;
         animation-fill-mode:forwards ;
         
+        
       
         .tagcloud {
-        display: block;
-
+          flex: 50%;
+          
           color: #FF9900;
           font-family: 'Poppins', sans-serif;
           font-size: 20px;

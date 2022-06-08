@@ -1,8 +1,8 @@
 .nav-bar {
-    background: #181818;
+    background: #191919;
     width: 60px;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 3;
     min-height: 500px;
@@ -40,7 +40,7 @@ nav {
     width: 100%;
     a{
         font-size: 22px;
-        color: #4d4d4e;
+        color: #fff;
         display: block;
         line-height: 51px;
         height: 51px;
@@ -125,7 +125,7 @@ nav {
             display: block;
             font-size: 15px;
             line-height: 16px;
-            color: #4d4d4e;
+            color: #fff;
             
             &:hover{
                 color: #FF9900;

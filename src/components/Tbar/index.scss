@@ -1,0 +1,45 @@
+$body-bg: #000;
+$body-color: #fff;
+@import "~bootstrap/scss/bootstrap";
+
+.house{
+    color: white;
+    display: inline;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 16px;
+    svg{
+        height: 15px;
+        width: 15px;
+        padding-right: 3px;
+    }
+}
+.me-auto{
+    margin: auto;
+    font-weight: 300;
+
+    a{  
+        display: block;
+        text-decoration: none;
+        color: white;
+        letter-spacing: 3px;
+        font-size: 16px;
+    svg{
+        padding-right: 10px;
+    }
+        
+    }
+}
+
+.tag:active{
+    color: #FF9900;
+}
+.tag:hover{
+    color: #FF9900; 
+}
+.house:active{
+    color: #FF9900; 
+}
+.house:hover{
+    color: #FF9900; 
+}

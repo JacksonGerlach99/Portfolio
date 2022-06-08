@@ -3,6 +3,19 @@ import TagCloud from 'TagCloud'
 
 const Cloud = () => {
   const [isLoading, setLoad] = useState(true)
+  const initialSize = Math.min(window.innerWidth, window.innerHeight);
+  const [state, setState] = React.useState({width: initialSize, height: initialSize});
+
+  React.useEffect(()=> {
+
+    const cb = () => {
+      const newSize = Math.min(window.innerWidth, window.innerHeight);
+      setState({width: newSize, height: newSize})
+    };
+    window.addEventListener( 'resize', cb, false );
+
+    return () => window.removeEventListener('resize', cb)
+}, []);
 
   const container = '.content'
   const texts = [
@@ -25,7 +38,7 @@ const Cloud = () => {
     'Git',
   ]
   const options = {
-    radius: 350,
+    radius: state.width/2.75,
     // animation speed
     // slow, normal, fast
     maxSpeed: 'fast',
