@@ -3,9 +3,11 @@ import "./index.scss"
 import { useEffect, useState } from 'react'
 import { useRef } from 'react'
 import { MapContainer, TileLayer } from 'react-leaflet'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import emailjs from '@emailjs/browser'
 import ScreenChange from '../loader'
 import { Container, Row, Col } from 'react-grid-system'
+import {faLinkedinIn, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 
 const Contact = () =>{
@@ -72,6 +74,29 @@ const Contact = () =>{
                     </form>
                 </div>
             </div>
+
+            <Col className="links">
+            <ul>
+            <li>
+                <a target="_blank" rel="noreferrer" href ="https://github.com/jacksongerlach99">
+                    <FontAwesomeIcon icon={ faGithub}/>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" rel="noreferrer" href ="https://www.linkedin.com/in/jackson-gerlach-53b83623a/">
+                    <FontAwesomeIcon icon={ faLinkedinIn}/>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" rel="noreferrer" href ="https://twitter.com/JacksonGe99">
+                    <FontAwesomeIcon icon={ faTwitter}/>
+                </a>
+            </li>
+
+        </ul>
+
+            </Col>
+
             </Col>
 
             <Col xl = {6} md={12} xs={11}>
@@ -85,6 +110,11 @@ const Contact = () =>{
         
             <ScreenChange/>
             </Row>
+
+
+
+
+
         </Container>
         
         </>

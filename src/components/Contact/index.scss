@@ -5,6 +5,38 @@
     background-color: black;
 
 
+    .links{
+        margin-top: -50px;
+        ul{
+            display: table;
+            margin: 0 auto;
+            list-style: none;
+            padding: 0;
+            overflow: hidden;
+        }
+        li{
+            float: left;
+        }
+        
+        li a{
+            font-size: 20px;
+            color: #fff;
+            padding: 20px;
+
+            &:hover{
+                color: #FF9900;
+            }
+        
+
+        }
+
+
+    }
+
+
+
+
+
     .text-zone{
         flex: 50%;
         display: block;
