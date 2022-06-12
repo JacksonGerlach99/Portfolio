@@ -19,9 +19,11 @@
         }
         
         li a{
+            opacity: 0;
             font-size: 20px;
             color: #fff;
             padding: 20px;
+            animation: fadeInUp 2s 2.5s forwards;
 
             &:hover{
                 color: #FF9900;
