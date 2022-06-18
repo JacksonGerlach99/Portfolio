@@ -12,7 +12,7 @@ const About = () => {
         <Container className='about-page'>
             <ParticleBackground/>
                 <Row align="center" justify="center" direction="row" className='row'>
-                    <Col xl = {5}  md ={12} lg = {10}>
+                    <Col md ={12} lg = {12} xl = {12} xxl={5} >
                     <div className='text-zone'>
                     <div class="glitch" data-text="<About Me/>">
                     <div>&lt;About Me/&gt;</div>
@@ -22,7 +22,7 @@ const About = () => {
                     </div>
                     </Col>
 
-                    <Col xl = {7}  md ={10} lg = {8} align="center" className='right-side-about'>
+                    <Col md ={12} lg = {10} xl = {10} xxl={7}   align="center" className='right-side-about'>
                         <Art/>
                     </Col>
                 <ScreenChange/>

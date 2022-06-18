@@ -8,6 +8,7 @@ const Skill = () =>{
     return(
         <Container className='skill-container'>
             <ParticleBackground/>
+            <ScreenChange/>
             <Row align="center" justify="center" direction="row" className='row'>
                 <Col xl = {5} justify="center" >
                 <div className="text-zone">
@@ -26,7 +27,6 @@ const Skill = () =>{
                 </Col>
 
 
-            <ScreenChange/>
         </Row>
         </Container>
     )

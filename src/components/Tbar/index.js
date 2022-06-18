@@ -4,10 +4,16 @@ import { Container, Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import {faHome,faUser, faEnvelope, faToolbox,faListCheck} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useState } from "react";
+
+
 
 
 const Tbar = () =>{
+    const [expand, updateExpanded] = useState(false);
+  
 
+  
     return (
         <div className='Tbar-page'>
             <Navbar bg="black" variant ={"dark"} expand="lg" fixed='top'>
@@ -17,7 +23,16 @@ const Tbar = () =>{
                         < FontAwesomeIcon icon={faHome} /> Home
                     </Link>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle
+                    aria-controls="responsive-navbar-nav"
+                    onClick={() => {
+                        updateExpanded(expand ? false : "expanded");
+                    }}
+                    >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
                     <Nav.Link href="about-me">
