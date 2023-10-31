@@ -1,3 +1,3 @@
 # Portfolio 
 
-Code for github.io website build through js react
+Code for github.io website built through js react
