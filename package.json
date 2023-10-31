@@ -2,7 +2,7 @@
   "name": "react-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jacksongerlach99.github.io",
+  "homepage": "https://jacksongerlach99.github.io/Portfolio",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^1.2.0",
     "@emailjs/browser": "^3.6.2",
