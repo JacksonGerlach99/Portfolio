@@ -2,8 +2,9 @@
   "name": "react-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jacksongerlach99.github.io",
+  "homepage": "https://jacksongerlach99.github.io/Portfolio/",
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^1.2.0",
     "@emailjs/browser": "^3.6.2",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
@@ -14,6 +15,7 @@
     "@tweenjs/tween.js": "^18.6.4",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.1.3",
+    "caniuse-lite": "^1.0.30001559",
     "encom-globe-react": "^0.0.3",
     "gsap": "npm:@gsap/shockingly@^3.10.4",
     "gsap-trial": "^3.10.4",
@@ -37,7 +39,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
